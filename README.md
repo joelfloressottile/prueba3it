@@ -28,5 +28,3 @@ ng serve
 ```
 
 After running one of these, you can check your browser at `localhost:4200`
-
-You can shut it down manually with `Ctrl-C`.
