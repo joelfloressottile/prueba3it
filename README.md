@@ -40,5 +40,5 @@ After running one of these, you can check your browser at `localhost:4200`
 #### Desktop
 ![alt text](https://i.ibb.co/BBsFwHr/desktop2.png)
 #### Mobile
-![alt text](https://i.ibb.co/PT2n10p/desktop2.png)
+![alt text](https://i.ibb.co/tCxwhjv/mobile3.png)
 
