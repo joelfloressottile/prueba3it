@@ -1,27 +1,27 @@
 # Prueba3it
+Job application test for 3IT with Angular 11, Bootstrap 4, Sass and Chartjs.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
+## Get started
 
-## Development server
+### Clone the repo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
+git clone https://github.com/joelfloressottile/prueba3it.git
+cd prueba3it
+```
 
-## Code scaffolding
+### Install npm packages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the `npm` packages described in the `package.json` and verify that it works:
 
-## Build
+```shell
+npm install
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The `npm start` command builds (compiles TypeScript and copies assets) the application into `dist/`, watches for changes to the source files, and runs `lite-server` on port `3000`.
 
-## Running unit tests
+You can shut it down manually with `Ctrl-C`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### npm scripts
+```
