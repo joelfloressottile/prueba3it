@@ -30,5 +30,9 @@ ng serve
 After running one of these, you can check your browser at `localhost:4200`
 
 ## Demo images
+### Home
+#### Desktop
 ![alt text](https://i.ibb.co/PT2n10p/desktop1.png)
+#### Mobile
+### Indicator interior
 
