@@ -34,5 +34,10 @@ After running one of these, you can check your browser at `localhost:4200`
 #### Desktop
 ![alt text](https://i.ibb.co/PT2n10p/desktop1.png)
 #### Mobile
+![alt text](https://i.ibb.co/PT2n10p/desktop1.png)
 ### Indicator interior
+#### Desktop
+![alt text](https://i.ibb.co/PT2n10p/desktop1.png)
+#### Mobile
+![alt text](https://i.ibb.co/PT2n10p/desktop1.png)
 
