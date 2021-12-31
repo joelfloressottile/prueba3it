@@ -1,0 +1,91 @@
+@import "src/styles/common";
+@import "src/styles/breakpoints";
+
+
+.indicator-modal{
+
+    & .modal-content{
+        border-radius: 20px 0 20px 20px;
+        overflow:hidden;
+    }
+    
+    &__header{
+        background: $primary-blue;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        & span{
+            color: #fff;
+        }
+
+        & button{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            color: #fff;
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            display: inline-flex;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    &__body{
+        background: $primary-light;
+        padding: 15px;
+    }
+
+    &__footer{
+        background: $primary-light;
+        padding: 0 15px 15px;
+    }
+
+    &__value{
+        text-align: center;
+        color: $primary-blue;
+        font-weight: bold;
+        font-size: 28px;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #e4e2e2;
+    }
+
+    &__attributes-list{
+        max-width: 300px;
+        margin: auto;
+    }
+
+    &__attribute{
+        display: flex;
+        justify-content: space-between;
+        & span:first-of-type{
+            font-weight: 700;
+        }
+    }
+
+    &__btn-row{
+        display: flex;
+        justify-content: center;
+
+        & a{
+            background: $primary-yellow;
+            color: $primary-dark;
+            padding: 10px 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 800;
+        }
+    }
+       
+
+    & abbr{
+        color: $primary-orange;
+    }
+}

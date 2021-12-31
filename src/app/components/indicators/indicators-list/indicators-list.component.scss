@@ -1,0 +1,68 @@
+@import "src/styles/common";
+@import "src/styles/breakpoints";
+
+.indicators-list{
+    border: 1px solid #9b9b9b21;
+    box-shadow: 0px 5px 20px #0000000a;
+    position: relative;
+
+    &:before{
+        content:"";
+        position: absolute;
+        top:-60px;
+        left: -100px;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: $secondary-blue;
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    &:after{
+        content:"";
+        position: absolute;
+        bottom:-60px;
+        right: -100px;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: $secondary-blue;
+        opacity: 0.4;
+        z-index: -1;
+    }
+    
+
+    &__grid{
+        position: relative;
+        &__header{
+            background: $primary-blue;
+            padding: 15px 40px 15px 15px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            column-gap: 15px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        &__cell{
+            & span{
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__unit, &__value, &__date{
+        @include until('bslarge'){
+            display: none;
+        }
+    }
+
+    & .before-last-indicator{
+        border-bottom: 1px solid #cfcfcf; 
+    }
+
+    &__loading-state, &__empty-state{
+        text-align: center;
+    }
+}

@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'styles/common';
+@import 'styles/breakpoints';
+
+
+body{
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: $primary-light;
+    color: $primary-dark;
+    font-size: 14px;
+
+    & .site-wrapper{
+        padding-top: 100px;
+    }
+
+    & h1{
+        text-align: center;
+        @include roboto-cond(28px, 800, 1, uppercase);
+        position: relative;
+        padding-bottom: 10px;
+        
+        &:before{
+            content:"";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid $primary-yellow;
+            width: 120%;
+        }
+    }
+
+    & h2{
+        text-align: center;
+        @include roboto-cond(20px, 800, 1, uppercase);
+    }
+}
+
+.page-wrapper{
+    min-height: calc(100vh - 196px);
+}
+
+.loading-icon{
+    animation: spin 1s 0.5s infinite;
+    margin-bottom: 10px;
+    color: $primary-orange;
+    font-size: 36px;
+}
+
+@keyframes spin {            
+    100% { 
+        transform:rotate(180deg); 
+    } 
+}
+
+.empty-icon{
+    margin-bottom: 10px;
+    color: $primary-orange;
+    font-size: 36px;
+}

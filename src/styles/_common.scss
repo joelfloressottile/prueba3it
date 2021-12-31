@@ -1,0 +1,25 @@
+$primary-dark: #232528;
+$secondary-dark: #161E54;
+$primary-light: #eceff0;
+$primary-yellow: #FDCA05;
+$primary-blue: #161E54;
+$secondary-blue: #88E0EF;
+$tertiary-blue: #5ebdce;
+$primary-orange: #FF5151;
+
+//Mixins
+@mixin roboto($font-size, $font-weight, $line-height, $text-transform){
+    font-family: 'Roboto', sans-serif;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $text-transform;
+}
+
+@mixin roboto-cond($font-size, $font-weight, $line-height, $text-transform){
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $text-transform;
+}

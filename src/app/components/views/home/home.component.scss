@@ -1,0 +1,23 @@
+@import "src/styles/common";
+@import "src/styles/breakpoints";
+
+
+.home-page{
+    &__heading-container{
+        padding-top: 80px;
+    }
+
+    &__title{
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include until('bslarge'){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__indicators-list-section{
+        overflow: hidden;
+        padding: 70px 0;
+    }
+}

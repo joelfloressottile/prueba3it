@@ -1,0 +1,32 @@
+<section class="indicator-series-list">
+    <section class="indicator-series-list__table">
+        <div class="indicator-series-list__grid">
+
+            <div class="indicator-series-list__grid__header">
+                <div class="indicators-series-list__name">
+                    <span>Valor</span>
+                </div>
+                <div class="indicators-series-list__unit">
+                    <span>Fecha</span>
+                </div>
+            </div>
+    
+            <div class="indicator-series-list__grid__body">
+                <div *ngFor="let serie of series let last = last" [ngClass]="{'before-last-serie': !last}" class="indicator-series-list__grid__cell" >
+                    <div class="indicator-series-list__value" [innerHTML]="serie.value | indicatorValue:'htmlOutput':unit | TrustHtml">
+                    </div>
+                    <div>
+                        {{serie.date | moment}}
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    <section class="indicator-series-list__chart-col">
+        <div class="indicator-series-list__chart">
+            <app-series-chart [series]="series" [indicatorUnit]="unit"></app-series-chart>
+        </div>
+    </section>
+    
+</section>

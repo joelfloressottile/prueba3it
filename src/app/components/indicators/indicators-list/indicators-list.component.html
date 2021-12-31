@@ -1,0 +1,30 @@
+<div *ngIf="loading" class="indicators-list__loading-state">
+    <i class="material-icons-round loading-icon">hourglass_full</i>
+    <p>Buscando las últimas actualizaciones de indicadores</p>
+</div>
+<div *ngIf="!loading && !indicators.length" class="indicators-list__empty-state">
+    No encontramos nada
+</div>
+<div *ngIf="!loading && indicators.length" class="indicators-list">
+    <article class="indicators-list__grid">
+        <div class="indicators-list__grid__header">
+            <div class="indicators-list__grid__cell indicators-list__name">
+                <span>Nombre</span>
+            </div>
+            <div class="indicators-list__grid__cell indicators-list__unit">
+                <span>Unidad medida</span>
+            </div>
+            <div class="indicators-list__grid__cell indicators-list__value">
+                <span>Valor</span>
+            </div>
+            <div class="indicators-list__grid__cell indicators-list__date">
+                <span>Última actualización</span>
+            </div>
+        </div>
+        <div class="indicators-list__grid__body">
+            <div *ngFor="let indicator of indicators; let last = last" [ngClass]="{'before-last-indicator': !last}">
+                <app-indicator [indicatorData]="indicator" [last]="last"></app-indicator>
+            </div>
+        </div>
+    </article>
+</div>

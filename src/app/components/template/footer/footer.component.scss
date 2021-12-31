@@ -1,0 +1,15 @@
+@import "src/styles/common";
+@import "src/styles/breakpoints";
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background: $primary-blue;
+    padding: 40px 20px;
+
+    &__copyright{
+        @include roboto(16px, normal, 1, none);
+        color: #fff;
+    }
+}

@@ -1,0 +1,27 @@
+<div class="indicator-item-container" [ngClass]="{'last-indicator' : last}">
+    <a [routerLink]="['/indicador', data.code]" [state]="{title: data.name}" class="indicator-item"> 
+        <div class="indicator-item__grid">
+            <div class="indicator-item__grid__cell indicator-item__name">
+                <span>{{data.name}}</span>
+                <span>{{data.unit}}</span>
+            </div>
+            <div class="indicator-item__grid__cell indicator-item__unit">
+                <span>{{data.unit}}</span>
+            </div>
+            <div class="indicator-item__grid__cell indicator-item__value">
+                <span [innerHTML]="data.value | indicatorValue:'htmlOutput':data.unit | TrustHtml"></span>
+                
+            </div>
+            <div class="indicator-item__grid__cell indicator-item__date">
+                <span>{{data.lastUpdate | moment}}</span>
+            </div>
+        </div>
+        <i class="material-icons">arrow_forward</i>
+    </a>
+    <div class="indicator-item__modal-toggler">
+        <button type="button" data-toggle="modal" [attr.data-target]="'#'+data.code+'Modal'">
+            <i class="material-icons">info</i>
+        </button>
+    </div>
+</div>
+<app-indicator-modal [indicatorData]="data"></app-indicator-modal>

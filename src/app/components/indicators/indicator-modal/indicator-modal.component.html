@@ -1,0 +1,36 @@
+<div class="indicator-modal modal fade" [id]="indicatorData.code+'Modal'" tabindex="-1" role="dialog" [attr.aria-labelledby]="indicatorData.code+'ModalLabel'" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <section class="indicator-modal__header">
+        <span>
+          {{indicatorData.name}}
+        </span>
+        <button type="button" data-dismiss="modal" aria-label="Close">
+         <i class="material-icons">close</i>
+        </button>
+      </section>
+      <section class="indicator-modal__body">
+        <p class="indicator-modal__value" [innerHTML]="indicatorData.value | indicatorValue:'htmlOutput':indicatorData.unit | TrustHtml">
+          
+        </p>
+        <div class="indicator-modal__attributes-list">
+          <p class="indicator-modal__date indicator-modal__attribute">
+            <span>Última actualización</span>
+            <span>{{indicatorData.lastUpdate | moment}}</span>
+          </p>
+          <p class="indicator-modal__unit indicator-modal__attribute">
+            <span>Unidad de medida</span>
+            <span>{{indicatorData.unit}}</span>
+          </p>
+        </div>
+      </section>
+      <section class="indicator-modal__footer">
+        <div class="indicator-modal__btn-row">
+          <a [routerLink]="['/indicador', indicatorData.code]">
+            Ver más
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

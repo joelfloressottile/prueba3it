@@ -1,0 +1,25 @@
+<section class="indicator-single-page page-wrapper">
+    <section class="container heading-container">
+        <div class="indicator-single-page__heading">
+            <div class="row justify-content-center">
+                <h1 class="indicator-single-page__title">Single Indicador</h1>
+            </div>
+            <div *ngIf="indicator.name" class="row justify-content-center">
+                <h2 class="indicator-single-page__subtitle">{{indicator.name}}</h2>
+            </div>
+        </div>
+    </section>
+    <section class="indicator-single-page__table-chart-section">
+        <div class="container table-chart-container">
+            <app-indicator-series-list *ngIf="!loading && indicator.series.length" [series]="indicator.series" [unit]="indicator.unit"></app-indicator-series-list>
+            <div *ngIf="loading" class="indicator-single-page__loading-state">
+                <i class="material-icons-round loading-icon">hourglass_full</i>
+                <p>Buscando el registro histórico</p>
+            </div>
+            <div *ngIf="!loading && !indicator.series.length" class="indicator-single-page__empty-state">
+                <i class="material-icons-round empty-icon">leaderboard</i>
+                <p> No encontramos nada para este indicador</p>
+            </div>
+        </div>
+    </section>
+</section>
